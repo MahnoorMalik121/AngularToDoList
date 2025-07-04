@@ -40,3 +40,31 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+# Ignore VS cache
+.vs/
+
+# Ignore node_modules and Angular build stuff
+node_modules/
+dist/
+tmp/
+out-tsc/
+
+# Mac system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+
+# Environment files
+.env
+*.env
+
+# Angular logs
+npm-debug.log
+yarn-error.log
+
+# Optional: Ignore IDE config
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
