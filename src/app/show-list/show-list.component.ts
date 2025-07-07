@@ -10,4 +10,5 @@ import { NewListComponent } from './modal/new-list/new-list.component'
 })
 export class ShowListComponent {
   hero = 'Windstorm';
+  name = "FirstList";
 }

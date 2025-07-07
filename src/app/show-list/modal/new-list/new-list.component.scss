@@ -2,3 +2,7 @@
   background-color: #4F4F51;
   color: white;
 }
+.form-control:focus {
+  border-color: #633c48;
+  box-shadow: 0 0 0.25rem #633c48;
+}
