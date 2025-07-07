@@ -12,46 +12,27 @@
   </div>
   <div class="ShownList" id="ShowList">
 
+    <div *ngFor="let list of lists">
+      <h3>{{ list.name }}</h3> <!-- Display the name of the list -->
+      <button class="btn btnAdd btn-sm" id="btnArchive">Archive</button>
+      <button class="btn btn-sm" id="btnEditList">Edit</button>
+      <button class="btn btn-sm" id="btnDeleteList">Delete</button>
+      <table cellpadding="10" cellspacing="0" class="m-5 ListTable">
+        <thead>
+          <tr>
+            <th>Task</th>
+            <th>Done</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let task of list.tasks">
+            <td>{{ task.task }}</td>
+            <td><input type="checkbox" [checked]="task.done" /></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-    <table cellpadding="10" cellspacing="0" class="m-5 ListTable" style="float:left">
-      <thead>
-        <tr>
-          <th><h5>{{name}}</h5></th>
-          <th><button class="btn btnAdd btn-sm" id="btnArchive">Archive</button> </th>
-          <th><button class="btn btn-sm" id="btnEditList">Edit</button> </th>  
-          <th><button class="btn btn-sm" id="btnDeleteList">Delete</button> </th>
-        </tr>
-        <tr style="background-color: #f2f2f2;">
-          <th>Task</th>
-          <th></th>
-          <th></th>
-          <th>Done</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Why is the Wi-Fi always slow?! 😠</td>
-          <td><input type="checkbox" class="inp-cbx" id="cbx-15" /></td>
-
-        </tr>
-        <tr>
-          <td>Another software update? Really?! 😤</td>
-          <td><input type="checkbox" /></td>
-        </tr>
-        <tr>
-          <td>Who finished the coffee and left the pot empty?! 😡</td>
-          <td><input type="checkbox" /></td>
-        </tr>
-        <tr>
-          <td>Auto-correct, stop changing my words! 😾</td>
-          <td><input type="checkbox" /></td>
-        </tr>
-        <tr>
-          <td>Why is this bug still not fixed?! 🤬</td>
-          <td><input type="checkbox" /></td>
-        </tr>
-      </tbody>
-    </table>
   </div>
 </div>
 <app-new-list></app-new-list>

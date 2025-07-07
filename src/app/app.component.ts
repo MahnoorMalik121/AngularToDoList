@@ -4,10 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { ShowListComponent } from './show-list/show-list.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { CommonModule } from '@angular/common';
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ShowListComponent, NavbarComponent, FooterComponent, FormsModule],
+  imports: [RouterOutlet, ShowListComponent, NavbarComponent, FooterComponent, FormsModule, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   //imports: [ShowListComponent]
