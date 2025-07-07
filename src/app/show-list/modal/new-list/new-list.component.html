@@ -1,0 +1,46 @@
+<!-- modal.component.html -->
+<div class="modal fade" id="addListModal" tabindex="-1" aria-labelledby="addListModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content" style="background-color: #ede4e4;">
+      <div class="modal-header" style="background-color: #dbd3d3 ">
+        <h5 class="modal-title" id="addListModalLabel">Add New List</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body mb-3">
+<form #NewListForm="ngForm">
+  <div class="form-group mb-2">
+    <label for="ListName" class="mb-2">List Name</label>
+    <input
+      name="listName"
+      type="text"
+      required
+      class="form-control"
+      id="ListName"
+      placeholder="Enter the name"
+      ngModel
+    />
+  </div>
+  <div class="form-group mb-4">
+    <label for="itemsList" class="mb-2">Items to do</label>
+    <input
+      name="itemsList"
+      type="text"
+      class="form-control"
+      id="itemsList"
+      placeholder="Enter the tasks"
+      ngModel
+    />
+  </div>
+  <button
+    type="submit"
+    [disabled]="!NewListForm.valid"
+    class="btn float-end btnSubmit"
+  >
+    Submit
+  </button>
+</form>
+
+      </div>
+    </div>
+  </div>
+</div>
